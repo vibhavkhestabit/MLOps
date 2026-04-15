@@ -1,0 +1,38 @@
+[2026-04-15 13:46:19] [INFO] Starting user provisioning from users.txt...
+[2026-04-15 13:46:19] [INFO] Processing user: Vibhav (Vibhav Khaneja) for group: Development
+[2026-04-15 13:46:19] [INFO] Creating missing group: Development
+[2026-04-15 13:46:19] [INFO] Created user: Vibhav
+[2026-04-15 13:48:06] [INFO] Starting user provisioning from users.txt...
+[2026-04-15 13:48:06] [INFO] Processing user: Vibhav (Vibhav Khaneja) for group: Development
+[2026-04-15 13:48:06] [INFO] User Vibhav already exists. Skipping creation.
+[2026-04-15 13:48:06] [INFO] Processing user: Raj (Rajveer Singh) for group: Ops
+[2026-04-15 13:48:06] [INFO] Creating missing group: Ops
+[2026-04-15 13:48:06] [INFO] Created user: Raj
+[2026-04-15 13:48:06] [INFO] Set temporary password and forced reset for: Raj
+[2026-04-15 13:48:06] [INFO] Secured SSH directory for Raj with 700 permissions.
+[2026-04-15 13:48:06] [INFO] Processing user: Vaishanavi (Vaishanavi Maheshwari) for group: Admins
+[2026-04-15 13:48:06] [INFO] Creating missing group: Admins
+[2026-04-15 13:48:07] [INFO] Created user: Vaishanavi
+[2026-04-15 13:48:07] [INFO] Set temporary password and forced reset for: Vaishanavi
+[2026-04-15 13:48:07] [INFO] Secured SSH directory for Vaishanavi with 700 permissions.
+[2026-04-15 13:48:07] [INFO] User provisioning completed successfully.
+[2026-04-15 14:01:18] [INFO] Starting user provisioning from users.txt...
+[2026-04-15 14:01:18] [INFO] Processing user: Vibhav (Vibhav Khaneja) for group: Development
+[2026-04-15 14:01:18] [INFO] User Vibhav already exists. Skipping creation.
+[2026-04-15 14:01:18] [INFO] Processing user: Raj (Rajveer Singh) for group: Ops
+[2026-04-15 14:01:18] [INFO] User Raj already exists. Skipping creation.
+[2026-04-15 14:01:18] [INFO] Processing user: Vaishanavi (Vaishanavi Maheshwari) for group: Admins
+[2026-04-15 14:01:18] [INFO] User Vaishanavi already exists. Skipping creation.
+[2026-04-15 14:01:18] [INFO] User provisioning completed successfully.
+[2026-04-15 14:02:33] [INFO] Starting user provisioning from users.txt...
+[2026-04-15 14:02:33] [INFO] Processing user: Vibhav (Vibhav Khaneja) for group: Development
+[2026-04-15 14:02:33] [INFO] User Vibhav already exists. Skipping creation.
+[2026-04-15 14:02:33] [INFO] Processing user: Raj (Rajveer Singh) for group: Ops
+[2026-04-15 14:02:33] [INFO] User Raj already exists. Skipping creation.
+[2026-04-15 14:02:33] [INFO] Processing user: Vaishanavi (Vaishanavi Maheshwari) for group: Admins
+[2026-04-15 14:02:33] [INFO] User Vaishanavi already exists. Skipping creation.
+[2026-04-15 14:02:33] [INFO] Processing user: Shubh (Shubh Kumawat) for group: Development
+[2026-04-15 14:02:33] [INFO] Created user: Shubh
+[2026-04-15 14:02:33] [INFO] Set temporary password and forced reset for: Shubh
+[2026-04-15 14:02:33] [INFO] Secured SSH directory for Shubh with 700 permissions.
+[2026-04-15 14:02:33] [INFO] User provisioning completed successfully.

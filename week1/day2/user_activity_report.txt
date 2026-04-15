@@ -1,0 +1,51 @@
+==========================================
+         USER ACTIVITY REPORT             
+ Date: 2026-04-15 19:16:11
+==========================================
+
+[1] CURRENTLY LOGGED-IN USERS (w command)
+------------------------------------------
+ 19:16:11 up  8:23,  1 user,  load average: 0.19, 0.26, 0.16
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU  WHAT
+vibhavkh tty2     -                10:53    8:23m  0.02s  0.02s /usr/libexec/gnome-session-binary --session=ubuntu
+
+[2] LAST 5 LOGINS TO THE SERVER (last command)
+------------------------------------------
+vibhavkh tty2         tty2             Wed Apr 15 10:53   still logged in
+vibhavkh seat0        login screen     Wed Apr 15 10:53   still logged in
+reboot   system boot  6.17.0-20-generi Wed Apr 15 10:52   still running
+vibhavkh tty2         tty2             Fri Apr 10 11:06 - 10:52 (4+23:46)
+vibhavkh seat0        login screen     Fri Apr 10 11:06 - down  (4+23:46)
+
+wtmp begins Sat Jan  3 13:44:53 2026
+
+[3] RECENT COMMAND HISTORY BY USER
+------------------------------------------
+>>> User: hestabit
+sudo mysql
+sudo sh script.sh 
+curl -sL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh -o install_nvm.sh
+bash install_nvm.sh
+bash
+
+>>> User: Raj
+  (No command history found)
+
+>>> User: Shubh
+  (No command history found)
+
+>>> User: Vaishanavi
+  (No command history found)
+
+>>> User: vibhavkhaneja
+cd Ram
+cd Raj
+ls
+cd /
+ls
+
+
+[4] INACTIVE ACCOUNTS (> 90 Days)
+------------------------------------------
+Username         Port     From                                       Latest
+==========================================

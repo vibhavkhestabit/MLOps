@@ -1,0 +1,64 @@
+==========================================
+        PERMISSION AUDIT REPORT           
+ Date: 2026-04-15 17:11:45
+==========================================
+
+--- 777 FILES FOUND ---
+DANGER: /tmp/bad_script.sh
+  -> FIX: Run 'chmod 644 /tmp/bad_script.sh' or 'chmod 755 /tmp/bad_script.sh'
+
+--- WORLD-WRITABLE DIRECTORIES ---
+WARNING: /tmp
+  -> FIX: Run 'chmod o-w /tmp' or add sticky bit 'chmod +t /tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-redis-server.service-vMUqc4/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-redis-server.service-vMUqc4/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-redis-server.service-vMUqc4/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-polkit.service-FshvIe/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-polkit.service-FshvIe/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-polkit.service-FshvIe/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-oomd.service-7JizCr/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-oomd.service-7JizCr/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-oomd.service-7JizCr/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-fprintd.service-mcrP0G/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-fprintd.service-mcrP0G/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-fprintd.service-mcrP0G/tmp'
+WARNING: /tmp/snap-private-tmp/snap.firmware-updater/tmp
+  -> FIX: Run 'chmod o-w /tmp/snap-private-tmp/snap.firmware-updater/tmp' or add sticky bit 'chmod +t /tmp/snap-private-tmp/snap.firmware-updater/tmp'
+WARNING: /tmp/snap-private-tmp/snap.snapd-desktop-integration/tmp
+  -> FIX: Run 'chmod o-w /tmp/snap-private-tmp/snap.snapd-desktop-integration/tmp' or add sticky bit 'chmod +t /tmp/snap-private-tmp/snap.snapd-desktop-integration/tmp'
+WARNING: /tmp/snap-private-tmp/snap.teams-for-linux/tmp
+  -> FIX: Run 'chmod o-w /tmp/snap-private-tmp/snap.teams-for-linux/tmp' or add sticky bit 'chmod +t /tmp/snap-private-tmp/snap.teams-for-linux/tmp'
+WARNING: /tmp/.XIM-unix
+  -> FIX: Run 'chmod o-w /tmp/.XIM-unix' or add sticky bit 'chmod +t /tmp/.XIM-unix'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-fwupd.service-tZE8AH/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-fwupd.service-tZE8AH/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-fwupd.service-tZE8AH/tmp'
+WARNING: /tmp/.X11-unix
+  -> FIX: Run 'chmod o-w /tmp/.X11-unix' or add sticky bit 'chmod +t /tmp/.X11-unix'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-ModemManager.service-6ODcNN/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-ModemManager.service-6ODcNN/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-ModemManager.service-6ODcNN/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-power-profiles-daemon.service-dSNzCx/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-power-profiles-daemon.service-dSNzCx/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-power-profiles-daemon.service-dSNzCx/tmp'
+WARNING: /tmp/.ICE-unix
+  -> FIX: Run 'chmod o-w /tmp/.ICE-unix' or add sticky bit 'chmod +t /tmp/.ICE-unix'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-upower.service-xwbDsx/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-upower.service-xwbDsx/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-upower.service-xwbDsx/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-bolt.service-BF4Rsv/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-bolt.service-BF4Rsv/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-bolt.service-BF4Rsv/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-resolved.service-If6Sc3/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-resolved.service-If6Sc3/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-resolved.service-If6Sc3/tmp'
+WARNING: /tmp/.font-unix
+  -> FIX: Run 'chmod o-w /tmp/.font-unix' or add sticky bit 'chmod +t /tmp/.font-unix'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-logind.service-x1OdXQ/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-logind.service-x1OdXQ/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-logind.service-x1OdXQ/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-bluetooth.service-akzFHD/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-bluetooth.service-akzFHD/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-bluetooth.service-akzFHD/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-switcheroo-control.service-q1p6Bs/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-switcheroo-control.service-q1p6Bs/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-switcheroo-control.service-q1p6Bs/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-timesyncd.service-ye7x1f/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-timesyncd.service-ye7x1f/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-systemd-timesyncd.service-ye7x1f/tmp'
+WARNING: /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-colord.service-fVFojw/tmp
+  -> FIX: Run 'chmod o-w /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-colord.service-fVFojw/tmp' or add sticky bit 'chmod +t /tmp/systemd-private-bbf45e10c31649e0a00898de34e80e66-colord.service-fVFojw/tmp'
+
+--- SUID/SGID BINARIES ---
+
+--- ORPHANED FILES ---
+
+==========================================
+Audit Complete.
+==========================================
