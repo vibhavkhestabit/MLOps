@@ -1,0 +1,4 @@
+hostname,ip,type,alias
+web-01,192.168.1.21,A,www
+web-02,192.168.1.22,A,
+db-master,192.168.1.31,A,db

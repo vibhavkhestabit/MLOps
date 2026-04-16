@@ -1,0 +1,18 @@
+==========================================
+DNS Surveillance Run: 2026-04-16 19:40:46
+==========================================
+-> Auditing Node: web-01.devops.lab
+[[32mPASS[0m] Forward Record: web-01.devops.lab -> 192.168.1.21
+[[32mPASS[0m] Reverse Record: 192.168.1.21 -> web-01.devops.lab
+[[32mPASS[0m] Latency Check: 0ms
+------------------------------------------
+-> Auditing Node: web-02.devops.lab
+[[32mPASS[0m] Forward Record: web-02.devops.lab -> 192.168.1.22
+[[32mPASS[0m] Reverse Record: 192.168.1.22 -> web-02.devops.lab
+[[32mPASS[0m] Latency Check: 0ms
+------------------------------------------
+-> Auditing Node: db-master.devops.lab
+[[32mPASS[0m] Forward Record: db-master.devops.lab -> 192.168.1.31
+[[32mPASS[0m] Reverse Record: 192.168.1.31 -> db-master.devops.lab
+[[32mPASS[0m] Latency Check: 1ms
+------------------------------------------

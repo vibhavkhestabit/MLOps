@@ -1,0 +1,49 @@
+==========================================
+       NETWORK DIAGNOSTICS REPORT         
+ Date: 2026-04-16 17:45:25
+==========================================
+[[32mPASS[0m] Internet connectivity (8.8.8.8): OK
+[[32mPASS[0m] DNS resolution (google.com): OK -> IP is 142.251.43.110
+[[32mPASS[0m] Port 22 (SSH) on localhost: Open
+[[32mPASS[0m] Latency to 8.8.8.8: 16.246ms (Good)
+
+--- NETWORK INTERFACES ---
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eno0             DOWN           
+wlp69s0          UP             192.168.1.3/24 fe80::b62d:806e:ae31:95cf/64 
+br-0a3dcf8550c1  DOWN           172.18.0.1/16 
+br-414fccf5b15f  DOWN           172.20.0.1/16 
+br-bcfcd8f28e13  DOWN           172.19.0.1/16 
+docker0          DOWN           172.17.0.1/16 
+
+--- ROUTING TABLE ---
+default via 192.168.1.1 dev wlp69s0 proto dhcp src 192.168.1.3 metric 600 
+172.17.0.0/16 dev docker0 proto kernel scope link src 172.17.0.1 linkdown 
+172.18.0.0/16 dev br-0a3dcf8550c1 proto kernel scope link src 172.18.0.1 linkdown 
+172.19.0.0/16 dev br-bcfcd8f28e13 proto kernel scope link src 172.19.0.1 linkdown 
+172.20.0.0/16 dev br-414fccf5b15f proto kernel scope link src 172.20.0.1 linkdown 
+192.168.1.0/24 dev wlp69s0 proto kernel scope link src 192.168.1.3 metric 600 
+
+--- OPEN PORTS ---
+Netid State  Recv-Q Send-Q                       Local Address:Port  Peer Address:PortProcess
+udp   UNCONN 0      0                                  0.0.0.0:40093      0.0.0.0:*          
+udp   UNCONN 0      0                               127.0.0.54:53         0.0.0.0:*          
+udp   UNCONN 0      0                            127.0.0.53%lo:53         0.0.0.0:*          
+udp   UNCONN 0      0                              224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0                              224.0.0.251:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                  0.0.0.0:5353       0.0.0.0:*          
+udp   UNCONN 0      0                                     [::]:48768         [::]:*          
+udp   UNCONN 0      0      [fe80::b62d:806e:ae31:95cf]%wlp69s0:546           [::]:*          
+udp   UNCONN 0      0                                     [::]:5353          [::]:*          
+tcp   LISTEN 0      70                               127.0.0.1:33060      0.0.0.0:*          
+tcp   LISTEN 0      4096                             127.0.0.1:631        0.0.0.0:*          
+tcp   LISTEN 0      4096                             127.0.0.1:27017      0.0.0.0:*          
+tcp   LISTEN 0      4096                               0.0.0.0:22         0.0.0.0:*          
+tcp   LISTEN 0      4096                             127.0.0.1:11434      0.0.0.0:*          
+tcp   LISTEN 0      151                              127.0.0.1:3306       0.0.0.0:*          
+tcp   LISTEN 0      4096                         127.0.0.53%lo:53         0.0.0.0:*          
+tcp   LISTEN 0      511                              127.0.0.1:6379       0.0.0.0:*          
+tcp   LISTEN 0      4096                            127.0.0.54:53         0.0.0.0:*          
+tcp   LISTEN 0      4096                                  [::]:22            [::]:*          
+tcp   LISTEN 0      511                                  [::1]:6379          [::]:*          
+tcp   LISTEN 0      4096                                 [::1]:631           [::]:*          
