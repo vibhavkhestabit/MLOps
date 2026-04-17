@@ -1,0 +1,14 @@
+========== FIREWALL AUDIT ==========
+Date: Fri Apr 17 05:05:04 PM IST 2026
+------------------------------------
+Status: Active
+Rules Configured: 7
+------------------------------------
+Findings:
+[PASS] SSH port 22 is properly rate-limited.
+[PASS] MySQL port 3306 is not globally exposed.
+[INFO] Consider moving SSH from default Port 22 to a non-standard port (e.g., 2222) to avoid automated bots.
+------------------------------------
+Issues Found: 0
+Security Score: 100/100
+====================================
