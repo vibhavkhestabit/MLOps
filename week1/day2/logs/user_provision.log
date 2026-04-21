@@ -36,3 +36,31 @@
 [2026-04-15 14:02:33] [INFO] Set temporary password and forced reset for: Shubh
 [2026-04-15 14:02:33] [INFO] Secured SSH directory for Shubh with 700 permissions.
 [2026-04-15 14:02:33] [INFO] User provisioning completed successfully.
+[2026-04-21 17:06:11] [INFO] Starting user provisioning from /home/vibhavkhaneja/MLOps-Training/week1/day2/users.txt...
+[2026-04-21 17:06:11] [INFO] Processing user: Raj (Rajveer Singh) for group: Ops
+[2026-04-21 17:06:11] [INFO] Created user: Raj
+[2026-04-21 17:06:11] [INFO] Set temporary password and forced reset for: Raj
+[2026-04-21 17:06:11] [INFO] Secured SSH directory for Raj with 700 permissions.
+[2026-04-21 17:06:11] [INFO] Processing user: Vaishanavi (Vaishanavi Maheshwari) for group: Admins
+[2026-04-21 17:06:11] [INFO] Created user: Vaishanavi
+[2026-04-21 17:06:11] [INFO] Set temporary password and forced reset for: Vaishanavi
+[2026-04-21 17:06:11] [INFO] Secured SSH directory for Vaishanavi with 700 permissions.
+[2026-04-21 17:06:11] [INFO] Processing user: Shubh (Shubh Kumawat) for group: Development
+[2026-04-21 17:06:11] [INFO] Created user: Shubh
+[2026-04-21 17:06:11] [INFO] Set temporary password and forced reset for: Shubh
+[2026-04-21 17:06:11] [INFO] Secured SSH directory for Shubh with 700 permissions.
+[2026-04-21 17:06:11] [INFO] User provisioning completed successfully.
+[2026-04-21 17:12:35] [INFO] Starting user provisioning from /home/vibhavkhaneja/MLOps-Training/week1/day2/users.txt...
+[2026-04-21 17:12:35] [INFO] Processing user: Raj (Rajveer Singh) for group: Ops
+[2026-04-21 17:12:35] [INFO] Created user: Raj
+[2026-04-21 17:12:35] [INFO] Set temporary password and forced reset for: Raj
+[2026-04-21 17:12:35] [INFO] Secured SSH directory for Raj with 700 permissions.
+[2026-04-21 17:12:35] [INFO] Processing user: Vaishanavi (Vaishanavi Maheshwari) for group: Admins
+[2026-04-21 17:12:35] [INFO] Created user: Vaishanavi
+[2026-04-21 17:12:35] [INFO] Set temporary password and forced reset for: Vaishanavi
+[2026-04-21 17:12:35] [INFO] Secured SSH directory for Vaishanavi with 700 permissions.
+[2026-04-21 17:12:35] [INFO] Processing user: Shubh (Shubh Kumawat) for group: Development
+[2026-04-21 17:12:35] [INFO] Created user: Shubh
+[2026-04-21 17:12:35] [INFO] Set temporary password and forced reset for: Shubh
+[2026-04-21 17:12:35] [INFO] Secured SSH directory for Shubh with 700 permissions.
+[2026-04-21 17:12:35] [INFO] User provisioning completed successfully.

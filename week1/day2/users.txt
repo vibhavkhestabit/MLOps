@@ -1,5 +1,4 @@
 username,fullname,group,role
-Vibhav,Vibhav Khaneja,Development,Developer
 Raj,Rajveer Singh,Ops,Sysadmin
 Vaishanavi,Vaishanavi Maheshwari,Admins,Intern
 Shubh,Shubh Kumawat,Development,Developer
