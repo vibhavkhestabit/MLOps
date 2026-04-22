@@ -1,0 +1,23 @@
+[2026-04-22 13:28:00] [INFO] ========== NODE.JS INSTALLATION ==========
+[2026-04-22 13:28:00] [INFO] Installing nvm...
+[2026-04-22 13:28:04] [INFO] nvm installed successfully.
+[2026-04-22 13:28:04] [INFO] Installing Node.js v18.19.0...
+[2026-04-22 13:28:09] [INFO] Node.js v18.19.0 installed.
+[2026-04-22 13:28:09] [INFO] Installing Node.js v20.11.0...
+[2026-04-22 13:28:13] [INFO] Node.js v20.11.0 installed.
+[2026-04-22 13:28:13] [INFO] Installing Node.js v22.0.0...
+[2026-04-22 13:28:18] [INFO] Node.js v22.0.0 installed.
+[2026-04-22 13:28:18] [INFO] Node.js v20.11.0 installed (DEFAULT).
+[2026-04-22 13:28:18] [INFO] Verification:
+v20.11.0
+10.2.4
+[2026-04-22 13:28:18] [INFO] Created .nvmrc in home directory.
+[2026-04-22 13:28:18] [INFO] Node versions available:
+       v18.19.0 *
+->     v20.11.0 *
+        v22.0.0 *
+default -> v20.11.0 *
+lts/hydrogen -> v18.20.8 (-> N/A)
+lts/iron -> v20.20.2 (-> N/A)
+lts/jod -> v22.22.2 (-> N/A)
+[2026-04-22 13:28:19] [INFO] Installation completed successfully.
