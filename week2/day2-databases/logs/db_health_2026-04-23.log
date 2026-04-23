@@ -130,3 +130,27 @@
 [19:20:02] [INFO] Service: UP
 [19:20:02] [INFO] Active Connections: 4
 [19:20:02] [INFO] Database 'appdb' Data Size: 0MB
+[19:25:01] [INFO] System Disk Usage: 43%
+[19:25:01] [INFO] --- PostgreSQL Health ---
+[19:25:01] [INFO] Service: UP
+[19:25:02] [INFO] Connections: 6 / 100
+[19:25:02] [INFO] Database 'testdb' Size: 7679 kB
+[19:25:02] [INFO] --- MySQL Health ---
+[19:25:02] [INFO] Service: UP
+[19:25:02] [INFO] Connections: 1 / 150
+[19:25:02] [INFO] --- MongoDB Health ---
+[19:25:02] [INFO] Service: UP
+[19:25:02] [INFO] Active Connections: 4
+[19:25:02] [INFO] Database 'appdb' Data Size: 0MB
+[19:30:01] [INFO] System Disk Usage: 43%
+[19:30:01] [INFO] --- PostgreSQL Health ---
+[19:30:01] [INFO] Service: UP
+[19:30:02] [INFO] Connections: 6 / 100
+[19:30:02] [INFO] Database 'testdb' Size: 7679 kB
+[19:30:02] [INFO] --- MySQL Health ---
+[19:30:02] [INFO] Service: UP
+[19:30:02] [INFO] Connections: 1 / 150
+[19:30:02] [INFO] --- MongoDB Health ---
+[19:30:02] [INFO] Service: UP
+[19:30:02] [INFO] Active Connections: 4
+[19:30:02] [INFO] Database 'appdb' Data Size: 0MB
