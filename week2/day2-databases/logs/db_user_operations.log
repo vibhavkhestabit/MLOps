@@ -1,0 +1,3 @@
+[2026-04-23 16:14:08] Started Database User Manager.
+[2026-04-23 16:16:21] ✓ MySQL user 'ViratK_Sharma' created with read privileges on 'IPL'.
+[2026-04-23 16:17:09] ✓ PostgreSQL user 'Testing' created with read privileges on 'Example_Testdb'.

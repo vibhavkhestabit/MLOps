@@ -1,0 +1,9 @@
+[2026-04-23 15:44:30] [INFO] ========== MongoDB Setup ==========
+[2026-04-23 15:44:30] [INFO] Adding MongoDB 7.0 repository...
+[2026-04-23 15:44:49] [INFO] ✓ MongoDB 7.0 installed
+[2026-04-23 15:44:54] [INFO] Creating admin and application users...
+[2026-04-23 15:44:55] [INFO] ✓ Users 'admin' and 'appuser' created. Database 'appdb' initialized.
+[2026-04-23 15:44:55] [INFO] Optimizing mongod.conf (Enabling Auth, WiredTiger caching)...
+[2026-04-23 15:44:55] [INFO] ✓ Configuration applied and service restarted with Authentication ENFORCED.
+[2026-04-23 15:44:58] [INFO] ✓ Connection test: SUCCESSFUL
+[2026-04-23 15:44:58] [INFO] Status: Ready for production

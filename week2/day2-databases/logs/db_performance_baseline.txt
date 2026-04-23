@@ -1,0 +1,21 @@
+DATABASE PERFORMANCE BASELINE
+Generated: 2026-04-23 18:14:59
+========================================
+PostgreSQL (testdb):
+INSERT: 1000 queries in 0.47s (2118 qps)
+SELECT: 1000 queries in 0.09s (10309 qps)
+UPDATE: 1000 queries in 0.47s (2105 qps)
+Avg query time: 0.34ms
+
+MySQL (appdb):
+INSERT: 1000 queries in 1.74s (574 qps)
+SELECT: 1000 queries in 0.07s (12658 qps)
+UPDATE: 1000 queries in 1.76s (568 qps)
+Avg query time: 1.19ms
+
+MongoDB (appdb):
+insert: 1000 queries in 0.64s (1555 qps)
+find: 1000 queries in 0.60s (1652 qps)
+update: 1000 queries in 0.51s (1953 qps)
+Avg operation time: 0.58ms
+========================================

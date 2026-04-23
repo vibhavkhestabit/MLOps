@@ -1,0 +1,2 @@
+[2026-04-23 16:53:44] Initiating mysql restore from: /home/vibhavkhaneja/MLOps-Training/week2/day2-databases/scripts/../backups/mysql/daily/2026-04-23/all_databases_20260423_164051.sql.gz
+[2026-04-23 16:53:44] ✓ Restore completed successfully.

@@ -1,0 +1,13 @@
+[2026-04-23 15:27:21] [INFO] ========== PostgreSQL Setup ==========
+[2026-04-23 15:27:21] [INFO] Adding PostgreSQL repository and installing v15...
+[2026-04-23 15:35:59] [INFO] ========== PostgreSQL Setup ==========
+[2026-04-23 15:35:59] [INFO] Adding PostgreSQL repository and installing v15...
+[2026-04-23 15:36:17] [INFO] ✓ PostgreSQL 15 installed
+[2026-04-23 15:36:17] [INFO] Applying performance optimizations to /etc/postgresql/15/main/postgresql.conf...
+[2026-04-23 15:36:17] [INFO] ✓ Configuration optimized
+[2026-04-23 15:36:20] [INFO] ✓ Service started and enabled
+[2026-04-23 15:36:20] [INFO] Creating user 'dbadmin' and database 'testdb'...
+[2026-04-23 15:36:20] [INFO] ✓ User 'dbadmin' created
+[2026-04-23 15:36:20] [INFO] ✓ Test database 'testdb' created
+[2026-04-23 15:36:20] [INFO] ✓ Connection test: SUCCESSFUL
+[2026-04-23 15:36:20] [INFO] Status: Ready for production
