@@ -1,0 +1,9 @@
+[2026-04-24 16:25:29] [INFO] ========== Apache Setup ==========
+[2026-04-24 16:25:29] [INFO] Installing Apache2 (httpd)...
+[2026-04-24 16:25:42] [INFO] ✓ Apache2 installed
+[2026-04-24 16:25:42] [INFO] Enabling proxy, ssl, rewrite, and headers modules...
+[2026-04-24 16:25:42] [INFO] ✓ Required modules enabled
+[2026-04-24 16:25:42] [INFO] Configuring Apache to listen on port 8080...
+[2026-04-24 16:25:43] [INFO] ✓ Service started and enabled
+[2026-04-24 16:25:43] [INFO] ✓ Test page accessible on port 8080
+[2026-04-24 16:25:43] [INFO] Status: Ready
