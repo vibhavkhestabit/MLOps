@@ -1,0 +1,73 @@
+Web Server Health Check - 2026-04-27 19:03:33
+==============================================
+Nginx:
+  ✓ Service: Active and running
+  ✓ Port 80: Listening
+  ✓ Port 443: Listening
+  ✓ Response time: 0ms
+  ✓ Active connections: 0/1024
+  ✓ Error log: Parsed successfully
+
+Apache:
+  ✓ Service: Active and running
+  ✓ Port 8080: Listening
+  ✓ Response time: 0ms
+  ✓ Active workers: Monitored
+  ✓ Error log: No critical errors
+
+Upstream Backends (Load Balancer Targets):
+  ✓ 127.0.0.1:3001 - UP (5ms)
+  ✓ 127.0.0.1:3002 - UP (8ms)
+  ✓ 127.0.0.1:3003 - UP (6ms)
+
+Status: All backends healthy.
+==============================================
+Web Server Health Check - 2026-04-27 19:04:55
+==============================================
+Nginx:
+  ✓ Service: Active and running
+  ✓ Port 80: Listening
+  ✓ Port 443: Listening
+  ✓ Response time: 0ms
+  ✓ Active connections: 0/1024
+  ✓ Error log: Parsed successfully
+
+Apache:
+  ✓ Service: Active and running
+  ✓ Port 8080: Listening
+  ✓ Response time: 0ms
+  ✓ Active workers: Monitored
+  ✓ Error log: No critical errors
+
+Upstream Backends (Load Balancer Targets):
+  ✓ 127.0.0.1:3001 - UP (
+0ms)
+  ✓ 127.0.0.1:3002 - UP (1ms)
+  ✓ 127.0.0.1:3003 - UP (1ms)
+
+Status: All backends healthy.
+==============================================
+Web Server Health Check - 2026-04-27 19:08:50
+==============================================
+Nginx:
+  ✓ Service: Active and running
+  ✓ Port 80: Listening
+  ✓ Port 443: Listening
+  ✓ Response time: 0ms
+  ✓ Active connections: 0/1024
+  ✓ Error log: Parsed successfully
+
+Apache:
+  ✓ Service: Active and running
+  ✓ Port 8080: Listening
+  ✓ Response time: 0ms
+  ✓ Active workers: Monitored
+  ✓ Error log: No critical errors
+
+Upstream Backends (Load Balancer Targets):
+  ✗ 127.0.0.1:3001 - DOWN (Connection refused or timeout)
+  ✓ 127.0.0.1:3002 - UP (1ms)
+  ✓ 127.0.0.1:3003 - UP (1ms)
+
+Status: 1 backend(s) down, traffic redirected.
+==============================================

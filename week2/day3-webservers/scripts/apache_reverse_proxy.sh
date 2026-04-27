@@ -62,7 +62,7 @@ EOF
         sudo systemctl reload apache2
         log_info "✓ Apache Reverse Proxy successfully configured!"
     else
-        log_info "❌ Apache configuration test failed."
+        log_info " Apache configuration test failed."
         exit 1
     fi
     echo "==============================================="

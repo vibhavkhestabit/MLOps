@@ -76,15 +76,17 @@ check_upstreams() {
     local down_count=0
 
     for backend in "${backends[@]}"; do
-        # We test with a max timeout of 2 seconds
-        local resp_time=$(curl -o /dev/null -s -w "%{time_total}\n" --max-time 2 "http://$backend" 2>/dev/null || echo "timeout")
+        local http_code=$(curl -o /dev/null -s -w "%{http_code}" --max-time 2 "http://$backend" 2>/dev/null)
         
-        if [ "$resp_time" = "timeout" ] || [ "$resp_time" = "0.000" ]; then
-            print_line "  ✗ $backend - DOWN (timeout or refused)"
-            down_count=$((down_count + 1))
-        else
+        if [ "$http_code" = "200" ]; then
+            # The server is genuinely healthy, now we calculate the speed
+            local resp_time=$(curl -o /dev/null -s -w "%{time_total}" "http://$backend" 2>/dev/null)
             local ms=$(echo "$resp_time * 1000" | bc | cut -d. -f1)
             print_line "  ✓ $backend - UP (${ms}ms)"
+        else
+            # The server is either dead, timing out, or throwing an error code
+            print_line "  ✗ $backend - DOWN (Connection refused or timeout)"
+            down_count=$((down_count + 1))
         fi
     done
 

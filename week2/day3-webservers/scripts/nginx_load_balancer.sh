@@ -82,7 +82,7 @@ EOF
         sudo systemctl reload nginx
         log_info "✓ Load Balancer successfully configured and activated."
     else
-        log_info "❌ Nginx configuration test failed."
+        log_info " Nginx configuration test failed."
         exit 1
     fi
     echo "============================================="
