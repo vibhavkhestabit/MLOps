@@ -1,0 +1,14 @@
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-28T11:07:32.308Z"}
+{"code":"28P01","file":"auth.c","length":103,"level":"error","line":"334","message":"Health check failed password authentication failed for user \"apiuser\"","name":"error","routine":"auth_failed","severity":"FATAL","stack":"error: password authentication failed for user \"apiuser\"\n    at /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/server.js:21:9","timestamp":"2026-04-28T11:08:00.353Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:08:00 +0000] \"GET /api/health HTTP/1.1\" 503 109 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-28T11:08:00.357Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-28T11:22:26.645Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:22:39 +0000] \"GET /api/health HTTP/1.1\" 200 200 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-28T11:22:39.486Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:41:39 +0000] \"POST /api/users HTTP/1.1\" 201 167 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-28T11:41:39.313Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:43:02 +0000] \"POST /api/users HTTP/1.1\" 201 169 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-28T11:43:02.292Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:43:13 +0000] \"GET /api/users HTTP/1.1\" 200 259 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-28T11:43:13.466Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:47:32 +0000] \"GET /api/health HTTP/1.1\" 200 202 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:47:32.185Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:49:09 +0000] \"GET /api/users HTTP/1.1\" 200 259 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:49:09.223Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:50:21 +0000] \"POST /api/users HTTP/1.1\" 201 174 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:50:21.912Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:51:31 +0000] \"PUT /api/users/1 HTTP/1.1\" 200 176 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:51:31.563Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:51:42 +0000] \"GET /api/users HTTP/1.1\" 200 403 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:51:42.504Z"}
+{"level":"info","message":"::1 - - [28/Apr/2026:11:52:17 +0000] \"DELETE /api/users/1 HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:52:17.455Z"}
