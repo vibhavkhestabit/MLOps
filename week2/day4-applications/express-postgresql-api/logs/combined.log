@@ -12,3 +12,4 @@
 {"level":"info","message":"::1 - - [28/Apr/2026:11:51:31 +0000] \"PUT /api/users/1 HTTP/1.1\" 200 176 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:51:31.563Z"}
 {"level":"info","message":"::1 - - [28/Apr/2026:11:51:42 +0000] \"GET /api/users HTTP/1.1\" 200 403 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:51:42.504Z"}
 {"level":"info","message":"::1 - - [28/Apr/2026:11:52:17 +0000] \"DELETE /api/users/1 HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:52:17.455Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-28T14:32:03.002Z"}
