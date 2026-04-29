@@ -13,3 +13,8 @@
 {"level":"info","message":"::1 - - [28/Apr/2026:11:51:42 +0000] \"GET /api/users HTTP/1.1\" 200 403 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:51:42.504Z"}
 {"level":"info","message":"::1 - - [28/Apr/2026:11:52:17 +0000] \"DELETE /api/users/1 HTTP/1.1\" 200 39 \"-\" \"PostmanRuntime/7.49.1\"","timestamp":"2026-04-28T11:52:17.455Z"}
 {"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-28T14:32:03.002Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-29T11:05:29.147Z"}
+{"level":"info","message":"::1 - - [29/Apr/2026:11:05:42 +0000] \"GET /api/health HTTP/1.1\" 200 198 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-29T11:05:42.947Z"}
+{"level":"info","message":"::1 - - [29/Apr/2026:11:05:43 +0000] \"GET /api/health HTTP/1.1\" 200 199 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-29T11:05:43.555Z"}
+{"level":"info","message":"::1 - - [29/Apr/2026:11:09:23 +0000] \"GET /api/health HTTP/1.1\" 200 200 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-29T11:09:23.124Z"}
+{"level":"info","message":"::1 - - [29/Apr/2026:11:09:25 +0000] \"GET /api/health HTTP/1.1\" 200 199 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-29T11:09:25.916Z"}

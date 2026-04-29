@@ -1,0 +1,23 @@
+2026-04-29T15:59:12: ◇ injected env (0) from .env // tip: ⌘ custom filepath { path: '/custom/path/.env' }
+2026-04-29T15:59:12: ◇ injected env (0) from .env // tip: ⌘ enable debugging { debug: true }
+2026-04-29T15:59:12: info: Express API running on http://localhost:3000 {"timestamp":"2026-04-29T10:29:12.366Z"}
+2026-04-29T15:59:12: 🚀 Server is running on http://localhost:3000
+2026-04-29T16:06:09: ◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+2026-04-29T16:06:09: ◇ injected env (0) from .env // tip: ◈ secrets for agents [www.dotenvx.com]
+2026-04-29T16:06:10: info: Express API running on http://localhost:3000 {"timestamp":"2026-04-29T10:36:10.021Z"}
+2026-04-29T16:06:10: 🚀 Server is running on http://localhost:3000
+2026-04-29T16:06:57: ◇ injected env (0) from .env // tip: ⌘ override existing { override: true }
+2026-04-29T16:06:57: ◇ injected env (0) from .env // tip: ◈ encrypted .env [www.dotenvx.com]
+2026-04-29T16:06:57: info: Express API running on http://localhost:3000 {"timestamp":"2026-04-29T10:36:57.304Z"}
+2026-04-29T16:06:57: 🚀 Server is running on http://localhost:3000
+2026-04-29T16:09:01: ◇ injected env (0) from .env // tip: ⌘ suppress logs { quiet: true }
+2026-04-29T16:09:01: ◇ injected env (0) from .env // tip: ⌘ multiple files { path: ['.env.local', '.env'] }
+2026-04-29T16:09:01: info: Express API running on http://localhost:3000 {"timestamp":"2026-04-29T10:39:01.505Z"}
+2026-04-29T16:09:01: 🚀 Server is running on http://localhost:3000
+2026-04-29T16:25:00: error: Health check failed SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string {"stack":"Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string\n    at /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/server.js:21:9","timestamp":"2026-04-29T10:55:00.662Z"}
+2026-04-29T16:25:00: info: ::1 - - [29/Apr/2026:10:55:00 +0000] "GET /api/health HTTP/1.1" 503 124 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" {"timestamp":"2026-04-29T10:55:00.665Z"}
+2026-04-29T16:25:00: info: ::1 - - [29/Apr/2026:10:55:00 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/api/health" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" {"timestamp":"2026-04-29T10:55:00.687Z"}
+2026-04-29T16:25:03: error: Health check failed SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string {"stack":"Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string\n    at /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/server.js:21:9","timestamp":"2026-04-29T10:55:03.805Z"}
+2026-04-29T16:25:03: info: ::1 - - [29/Apr/2026:10:55:03 +0000] "GET /api/health HTTP/1.1" 503 124 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" {"timestamp":"2026-04-29T10:55:03.807Z"}
+2026-04-29T16:25:04: error: Health check failed SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string {"stack":"Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string\n    at /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/server.js:21:9","timestamp":"2026-04-29T10:55:04.874Z"}
+2026-04-29T16:25:04: info: ::1 - - [29/Apr/2026:10:55:04 +0000] "GET /api/health HTTP/1.1" 503 124 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36" {"timestamp":"2026-04-29T10:55:04.876Z"}
