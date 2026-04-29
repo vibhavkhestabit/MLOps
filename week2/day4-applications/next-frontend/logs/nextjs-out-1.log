@@ -25,3 +25,17 @@
 2026-04-29T16:35:29: 
 2026-04-29T16:35:30:  GET / 200 in 298ms (next.js: 120ms, application-code: 177ms)
 2026-04-29T16:53:07:  GET / 200 in 45ms (next.js: 8ms, application-code: 37ms)
+2026-04-29T17:54:39: [?25h
+2026-04-29T18:02:49: 
+2026-04-29T18:02:49: > next-frontend@0.1.0 dev
+2026-04-29T18:02:49: > next dev -p 3001
+2026-04-29T18:02:49: 
+2026-04-29T18:02:49: ▲ Next.js 16.2.4 (Turbopack)
+2026-04-29T18:02:49: - Local:         http://localhost:3001
+2026-04-29T18:02:49: - Network:       http://10.10.1.171:3001
+2026-04-29T18:02:49: - Environments: .env.local
+2026-04-29T18:02:49: ✓ Ready in 255ms
+2026-04-29T18:02:50: 
+2026-04-29T18:03:11:  GET /api/health 404 in 258ms (next.js: 132ms, application-code: 126ms)
+2026-04-29T18:03:11:  GET / 200 in 48ms (next.js: 16ms, application-code: 31ms)
+2026-04-29T18:04:08: [?25h

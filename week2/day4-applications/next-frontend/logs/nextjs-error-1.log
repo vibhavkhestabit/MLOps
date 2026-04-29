@@ -59,3 +59,11 @@
 2026-04-29T16:35:46:   11 |       .then((res) => res.json())
 2026-04-29T16:35:46:   12 |       .then((data) => {
 2026-04-29T16:35:46:   13 |         setTasks(data); (anonymous)
+2026-04-29T18:02:49: ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2026-04-29T18:02:49: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+2026-04-29T18:02:49:  We detected multiple lockfiles and selected the directory of /home/vibhavkhaneja/package-lock.json as the root directory.
+2026-04-29T18:02:49:  To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+2026-04-29T18:02:49:    See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+2026-04-29T18:02:49:  Detected additional lockfiles: 
+2026-04-29T18:02:49:    * /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/next-frontend/package-lock.json
+2026-04-29T18:02:49: 
