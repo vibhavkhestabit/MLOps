@@ -1,0 +1,83 @@
+{"level":"info","message":"Express API running on http://localhost:3003","timestamp":"2026-04-30T07:44:48.063Z"}
+{"level":"info","message":"Express API running on http://localhost:3004","timestamp":"2026-04-30T07:44:48.080Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-30T07:44:48.162Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-30T07:54:56.520Z"}
+{"level":"error","message":"Health check failed SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string","stack":"Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string\n    at /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/server.js:21:9","timestamp":"2026-04-30T07:55:01.182Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:07:55:01 +0000] \"GET /api/health HTTP/1.1\" 503 124 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T07:55:01.188Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-30T07:56:21.726Z"}
+{"level":"error","message":"Health check failed SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string","stack":"Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string\n    at /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/node_modules/pg-pool/index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async /home/vibhavkhaneja/MLOps-Training/week2/day4-applications/express-postgresql-api/server.js:21:9","timestamp":"2026-04-30T07:56:26.384Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:07:56:26 +0000] \"GET /api/health HTTP/1.1\" 503 124 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T07:56:26.389Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-30T08:04:42.849Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:04:42.878Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:04:47 +0000] \"GET /api/health HTTP/1.1\" 200 176 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T08:04:47.287Z"}
+{"level":"info","message":"Express API running on http://localhost:3003","timestamp":"2026-04-30T08:04:48.222Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:04:48.253Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:04:52 +0000] \"GET /api/health HTTP/1.1\" 200 176 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T08:04:52.672Z"}
+{"level":"info","message":"Express API running on http://localhost:3004","timestamp":"2026-04-30T08:04:53.702Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:04:53.732Z"}
+{"level":"info","message":"Express API running on http://localhost:3003","timestamp":"2026-04-30T08:06:57.766Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-30T08:06:57.775Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:06:57.823Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:06:57.826Z"}
+{"level":"info","message":"Express API running on http://localhost:3004","timestamp":"2026-04-30T08:06:58.113Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:06:58.161Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-30T08:07:26.507Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:07:26.538Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:07:30 +0000] \"GET /api/health HTTP/1.1\" 200 176 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T08:07:30.943Z"}
+{"level":"info","message":"Express API running on http://localhost:3003","timestamp":"2026-04-30T08:07:31.912Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:07:31.942Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:07:36 +0000] \"GET /api/health HTTP/1.1\" 200 175 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T08:07:36.323Z"}
+{"level":"info","message":"Express API running on http://localhost:3004","timestamp":"2026-04-30T08:07:37.287Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T08:07:37.325Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:07:41 +0000] \"GET /api/health HTTP/1.1\" 200 176 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T08:07:41.715Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:25:09 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:25:09.275Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:25:17 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:25:17.147Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:25:17 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"http://localhost:3004/api/health\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:25:17.184Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:25:21 +0000] \"GET /api/health HTTP/1.1\" 200 178 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:25:21.457Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:25:21 +0000] \"GET /favicon.ico HTTP/1.1\" 404 150 \"http://localhost:3003/api/health\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:25:21.495Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:25:23 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:25:23.137Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:10 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:10.455Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:12 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:12.316Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:13 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:13.130Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:37 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:37.714Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:38 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:38.045Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:38 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:38.211Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:38 +0000] \"GET /api/health HTTP/1.1\" 200 178 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:38.394Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:38 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:38.723Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:38 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:38.908Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:39 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:39.070Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:08:27:39 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:39.235Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:44 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:44.671Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:44 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:44.831Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:45 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:45.004Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:45 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:45.158Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:45 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:45.302Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:27:45 +0000] \"GET /api/health) HTTP/1.0\" 404 150 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:27:45.465Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:29:03 +0000] \"GET /api/health HTTP/1.0\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:29:03.463Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:29:04 +0000] \"GET /api/health HTTP/1.0\" 200 178 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:29:04.887Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:29:07 +0000] \"GET /api/health HTTP/1.0\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:29:07.294Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:08:29:08 +0000] \"GET /api/health HTTP/1.0\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T08:29:08.493Z"}
+{"level":"error","message":"500 - SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string - /api/users - GET - ::ffff:127.0.0.1","timestamp":"2026-04-30T09:00:36.735Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:09:00:36 +0000] \"GET /api/users HTTP/1.0\" 500 33 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T09:00:36.737Z"}
+{"level":"error","message":"500 - SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string - /api/users - GET - ::ffff:127.0.0.1","timestamp":"2026-04-30T09:00:38.381Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:09:00:38 +0000] \"GET /api/users HTTP/1.0\" 500 33 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T09:00:38.382Z"}
+{"level":"error","message":"500 - SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string - /api/users - GET - ::ffff:127.0.0.1","timestamp":"2026-04-30T09:01:05.133Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:09:01:05 +0000] \"GET /api/users HTTP/1.0\" 500 33 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T09:01:05.135Z"}
+{"level":"error","message":"500 - SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string - /api/users - POST - ::ffff:127.0.0.1","timestamp":"2026-04-30T09:01:22.570Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:09:01:22 +0000] \"POST /api/users HTTP/1.0\" 500 33 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T09:01:22.572Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:09:01:30 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T09:01:30.459Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:09:01:30 +0000] \"GET /api/health HTTP/1.1\" 200 179 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T09:01:30.772Z"}
+{"level":"info","message":"::1 - - [30/Apr/2026:09:01:31 +0000] \"GET /api/health HTTP/1.1\" 200 178 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T09:01:31.022Z"}
+{"level":"info","message":"Express API running on http://localhost:3000","timestamp":"2026-04-30T10:49:37.557Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T10:49:37.572Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:10:49:42 +0000] \"GET /api/health HTTP/1.1\" 200 176 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T10:49:42.247Z"}
+{"level":"info","message":"Express API running on http://localhost:3003","timestamp":"2026-04-30T10:49:42.842Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T10:49:42.857Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:10:49:47 +0000] \"GET /api/health HTTP/1.1\" 200 176 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T10:49:47.518Z"}
+{"level":"info","message":"Express API running on http://localhost:3004","timestamp":"2026-04-30T10:49:48.095Z"}
+{"level":"info","message":"Successfully connected to MongoDB Cluster","timestamp":"2026-04-30T10:49:48.109Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:10:49:52 +0000] \"GET /api/health HTTP/1.1\" 200 176 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T10:49:52.804Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:10:49:56 +0000] \"GET /api/health HTTP/1.0\" 200 177 \"-\" \"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36\"","timestamp":"2026-04-30T10:49:56.683Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:10:50:31 +0000] \"GET /api/users HTTP/1.0\" 200 2 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T10:50:31.913Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:10:50:38 +0000] \"POST /api/users HTTP/1.0\" 201 207 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T10:50:38.211Z"}
+{"level":"info","message":"::ffff:127.0.0.1 - - [30/Apr/2026:10:50:43 +0000] \"GET /api/users HTTP/1.0\" 200 201 \"-\" \"curl/8.5.0\"","timestamp":"2026-04-30T10:50:43.578Z"}
