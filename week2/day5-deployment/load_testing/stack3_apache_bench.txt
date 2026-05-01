@@ -1,0 +1,56 @@
+
+--- Testing stack3 (http://127.0.0.1:8003/api/health) ---
+Running 10,000 requests with 100 concurrent users...
+This is ApacheBench, Version 2.3 <$Revision: 1903618 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking 127.0.0.1 (be patient)
+Completed 1000 requests
+Completed 2000 requests
+Completed 3000 requests
+Completed 4000 requests
+Completed 5000 requests
+Completed 6000 requests
+Completed 7000 requests
+Completed 8000 requests
+Completed 9000 requests
+Completed 10000 requests
+Finished 10000 requests
+
+
+Server Software:        uvicorn
+Server Hostname:        127.0.0.1
+Server Port:            8003
+
+Document Path:          /api/health
+Document Length:        43 bytes
+
+Concurrency Level:      100
+Time taken for tests:   13.477 seconds
+Complete requests:      10000
+Failed requests:        0
+Total transferred:      1870000 bytes
+HTML transferred:       430000 bytes
+Requests per second:    742.03 [#/sec] (mean)
+Time per request:       134.766 [ms] (mean)
+Time per request:       1.348 [ms] (mean, across all concurrent requests)
+Transfer rate:          135.51 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.2      0       3
+Processing:     7  134  20.7    130     203
+Waiting:        3  133  20.6    129     203
+Total:          7  134  20.7    130     203
+
+Percentage of the requests served within a certain time (ms)
+  50%    130
+  66%    132
+  75%    134
+  80%    135
+  90%    153
+  95%    197
+  98%    201
+  99%    202
+ 100%    203 (longest request)
