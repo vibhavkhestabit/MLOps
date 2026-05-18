@@ -14,8 +14,18 @@ npm-debug.log
 **/logs/
 **/pm2/*.log
 
+# Python
 venv/
 **/venv/
+__pycache__/
+*.pyc
+
+# Docker
+*.tar
+
+# Build folders
+dist/
+build/
 
 # Database Data Directories (CRITICAL)
 **/mongodb/data/
