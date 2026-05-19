@@ -1,0 +1,17 @@
+services:
+  backend:
+    environment:
+      NODE_ENV: production
+    command: node server.js
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    restart: always
+
+  nginx:
+    restart: always
+
+  mongo:
+    restart: always

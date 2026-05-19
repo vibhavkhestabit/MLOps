@@ -1,0 +1,13 @@
+services:
+  backend:
+    environment:
+      NODE_ENV: production
+    command: node server.js
+    restart: always
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "8095:80"
+    restart: always
