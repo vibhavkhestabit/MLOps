@@ -1,0 +1,46 @@
+services:
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "8095:80"
+    networks:
+      - frontend-net
+      - backend-net
+
+  api:
+    build: ./api
+    container_name: api
+    expose:
+      - "3000"
+    depends_on:
+      - database
+    networks:
+      - backend-net
+      - db-net
+
+  database:
+    image: postgres:15-alpine
+    container_name: database
+    environment:
+      POSTGRES_PASSWORD: secret123
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - db-net
+
+networks:
+
+  frontend-net:
+    driver: bridge
+
+  backend-net:
+    driver: bridge
+
+  db-net:
+    driver: bridge
+    internal: true
+
+volumes:
+  db-data:

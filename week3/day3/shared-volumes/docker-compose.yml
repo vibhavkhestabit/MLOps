@@ -1,0 +1,42 @@
+services:
+  writer:
+    image: alpine
+    container_name: writer
+    volumes:
+      - shared-data:/data
+    command: >
+      sh -c "
+      while true; do
+        echo Current time: $$(date) > /data/timestamp.txt;
+        sleep 5;
+      done"
+
+  reader:
+    image: alpine
+    container_name: reader
+    volumes:
+      - shared-data:/data:ro
+    command: >
+      sh -c "
+      while true; do
+        echo 'Reader Output:';
+        cat /data/timestamp.txt;
+        sleep 3;
+      done"
+
+  processor:
+    image: alpine
+    container_name: processor
+    volumes:
+      - shared-data:/data
+    command: >
+      sh -c "
+      while true; do
+        echo 'Processor Output:';
+        wc -c /data/timestamp.txt;
+        sleep 10;
+      done"
+
+volumes:
+  shared-data:
+
