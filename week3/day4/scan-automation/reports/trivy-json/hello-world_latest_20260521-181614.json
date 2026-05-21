@@ -1,0 +1,65 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.70.0"
+  },
+  "ReportID": "019e4a93-628c-7630-a859-7a3f7ee5cc30",
+  "CreatedAt": "2026-05-21T18:17:13.548407576+05:30",
+  "ArtifactID": "sha256:9f9528c995a045092782396e9e90d677c10b4a6f83f515e60c892da132e3952a",
+  "ArtifactName": "hello-world:latest",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "Size": 11776,
+    "ImageID": "sha256:05813aedc15fb7b4d732e1be879d3252c1c9c25d885824f6295cab4538cb85cd",
+    "DiffIDs": [
+      "sha256:53d204b3dc5ddbc129df4ce71996b8168711e211274c785de5e0d4eb68ec3851"
+    ],
+    "RepoTags": [
+      "hello-world:latest"
+    ],
+    "RepoDigests": [
+      "hello-world@sha256:05813aedc15fb7b4d732e1be879d3252c1c9c25d885824f6295cab4538cb85cd"
+    ],
+    "Reference": "hello-world:latest",
+    "ImageConfig": {
+      "architecture": "amd64",
+      "created": "2025-08-08T19:05:17Z",
+      "history": [
+        {
+          "created": "2025-08-08T19:05:17Z",
+          "created_by": "COPY hello / # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2025-08-08T19:05:17Z",
+          "created_by": "CMD [\"/hello\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:53d204b3dc5ddbc129df4ce71996b8168711e211274c785de5e0d4eb68ec3851"
+        ]
+      },
+      "config": {
+        "Cmd": [
+          "/hello"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ],
+        "WorkingDir": "/"
+      }
+    },
+    "Layers": [
+      {
+        "Size": 11776,
+        "Digest": "sha256:17eec7bbc9d79fa397ac95c7283ecd04d1fe6978516932a3db110c6206430809",
+        "DiffID": "sha256:53d204b3dc5ddbc129df4ce71996b8168711e211274c785de5e0d4eb68ec3851"
+      }
+    ]
+  }
+}
