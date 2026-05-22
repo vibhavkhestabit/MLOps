@@ -1,0 +1,13 @@
+services:
+  app-green:
+    build: ./app
+    image: myapp:green
+    container_name: app-green
+    environment:
+      VERSION: green
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true

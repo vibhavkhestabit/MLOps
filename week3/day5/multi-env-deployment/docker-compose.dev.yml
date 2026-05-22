@@ -1,0 +1,11 @@
+services:
+  app:
+    container_name: multi-env-app
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      APP_VERSION: dev-1.0.0
+    volumes:
+      - ./app:/app
+    command: npm start

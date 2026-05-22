@@ -1,0 +1,5 @@
+services:
+  app:
+    build: ./app
+    environment:
+      PORT: 3000

@@ -1,0 +1,69 @@
+Docker Performance Report
+Generated: Fri May 22 05:18:08 PM IST 2026
+
+=== IMAGE SIZES ===
+IMAGE                                       ID             DISK USAGE   CONTENT SIZE   EXTRA
+3tier-app-backend:latest                    10b34c1adf11        207MB         50.8MB        
+3tier-app-frontend:latest                   8262b15457f4       93.1MB         26.1MB        
+alpine:latest                               5b10f432ef3d       13.1MB         3.95MB        
+compose-isolation-api:latest                5c6258a7c144        212MB         51.3MB        
+compose-isolation-frontend:latest           89656dc0f84b       92.9MB         26.1MB        
+day2-client:latest                          ebc6727cd809        2.5GB          534MB        
+day2-server:latest                          29f650fd7cce       1.61GB          403MB        
+day3-backend:latest                         819e07659eed        195MB         47.2MB        
+day4-backend:latest                         3611f99bbad4        196MB         47.3MB        
+day5-backend:latest                         33aa58dcd786        250MB         55.9MB        
+day5-frontend:latest                        46b21219d27c        195MB         47.4MB        
+development-app:latest                      6d570b5239e3        214MB         51.4MB        
+docker-image-review:latest                  a7242730e842        182MB         45.6MB        
+gcr.io/cadvisor/cadvisor:latest             3de2bd520312        107MB         30.8MB        
+grafana/grafana:latest                      2d1f9ae67c17       1.46GB          348MB        
+hello-world:latest                          05813aedc15f       25.9kB         9.52kB        
+httpd:2                                     2a7deaaaf357        177MB         47.6MB        
+laravel-stack-app:latest                    21be3a1f2e83        933MB          240MB        
+laravel-stack-queue:latest                  f4385c53daa8        933MB          240MB        
+mern-backend:latest                         ba3010a62123        256MB         59.1MB        
+mongo:4.4.6                                 6efa05203990        605MB          168MB        
+mongo:6.0                                   03cda579c8ca       1.06GB          273MB        
+mongo:7                                     4b5bf3c2bb75       1.19GB          296MB        
+mongo:7.0                                   606f8e029603       1.15GB          287MB        
+mongo:latest                                6f55a078e025       1.27GB          333MB        
+multi-env-deployment-app:latest             226d6a57262e        214MB         51.4MB        
+myapp:blue                                  77deb0e79d59        214MB         51.4MB        
+myapp:green                                 331ec6d5a7d7        214MB         51.4MB        
+mysql:8.0                                   7dcddc01f13b        1.1GB          249MB        
+nginx:alpine                                dc48b7a872a7       93.8MB           27MB        
+nginx:latest                                800e7c98538c        241MB           66MB        
+node-app-secure:1.0.0                       ac9ff86b3147        203MB         49.7MB        
+node-app:1.0.0                              77d11637b033       1.59GB          400MB        
+node-image:latest                           ed1b4ac18cba        181MB         44.9MB        
+node-test:latest                            57afb18c5cac        182MB         45.6MB        
+node:20-alpine                              fb4cd12c85ee        194MB         48.8MB        
+postgres:15-alpine                          df7bca0066e6        392MB          110MB        
+production-app:latest                       f3581a020672        214MB         51.4MB        
+prom/prometheus:latest                      e4254400b856        578MB          153MB        
+python-app-secure:1.0.0                     1849c57b4556        209MB         50.5MB        
+python-runtime-secure:1.0.0                 600b3bc1baa0        209MB         50.5MB        
+python:3.12-alpine                          236173eb7400       74.9MB         18.7MB        
+redis:alpine                                d146f83b1e0f        134MB           35MB        
+registry:2                                  a3d8aaa63ed8       37.4MB         10.3MB   U    
+staging-app:latest                          a664ddc7f3c5        214MB         51.4MB        
+titanic-api:latest                          73214afbeede       3.67GB            1GB        
+vibhavkhaneja2404/frontend-app:1.0.0        8262b15457f4       93.1MB         26.1MB        
+vibhavkhaneja2404/node-app-secure:1.0.0     ac9ff86b3147        203MB         49.7MB        
+vibhavkhaneja2404/python-app-secure:1.0.0   1849c57b4556        209MB         50.5MB        
+
+=== CONTAINER STATS ===
+CONTAINER ID   NAME       CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O        PIDS
+2f0ecdd85513   registry   0.00%     8.219MiB / 15.17GiB   0.05%     49.9MB / 188kB   4.1kB / 49.9MB   15
+
+=== SYSTEM DF ===
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          46        1         23.66GB   5.542GB (23%)
+Containers      1         1         28.67kB   0B (0%)
+Local Volumes   4         0         540.7MB   540.7MB (100%)
+Build Cache     199       0         10.59GB   1.041GB
+
+=== RUNNING CONTAINERS ===
+CONTAINER ID   IMAGE        COMMAND                  CREATED       STATUS       PORTS                                         NAMES
+2f0ecdd85513   registry:2   "/entrypoint.sh /etc…"   3 hours ago   Up 3 hours   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   registry

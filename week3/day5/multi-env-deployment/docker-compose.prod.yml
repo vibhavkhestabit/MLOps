@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: production-app
+    ports:
+      - "3002:3000"
+    environment:
+      NODE_ENV: production
+      APP_VERSION: prod-1.0.0
+    restart: always

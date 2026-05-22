@@ -1,0 +1,13 @@
+services:
+  app-blue:
+    build: ./app
+    image: myapp:blue
+    container_name: app-blue
+    environment:
+      VERSION: blue
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    external: true
