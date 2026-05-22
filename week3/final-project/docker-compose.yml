@@ -1,0 +1,108 @@
+services:
+
+  frontend:
+    build: ./frontend
+    container_name: frontend
+    ports:
+      - "3000:80"
+    networks:
+      - frontend-net
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "5000:5000"
+    networks:
+      - frontend-net
+      - backend-net
+    depends_on:
+      - user-service
+      - product-service
+      - order-service
+
+  user-service:
+    build: ./services/user-service
+    container_name: user-service
+    ports:
+      - "8010:8001"
+    networks:
+      - backend-net
+      - database-net
+    depends_on:
+      - postgres
+
+  product-service:
+    build: ./services/product-service
+    container_name: product-service
+    ports:
+      - "8011:8002"
+    networks:
+      - backend-net
+      - database-net
+    depends_on:
+      - mongodb
+
+  order-service:
+    build: ./services/order-service
+    container_name: order-service
+    ports:
+      - "8012:8003"
+    networks:
+      - backend-net
+      - database-net
+    depends_on:
+      - postgres
+      - rabbitmq
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: ADMIN123
+      POSTGRES_DB: microservices_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - database-net
+
+  mongodb:
+    image: mongo:7
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: ADMIN123
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - database-net
+
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6380:6379"
+    networks:
+      - database-net
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: ADMIN123
+    networks:
+      - database-net
+
+networks:
+  frontend-net:
+  backend-net:
+  database-net:
+
+volumes:
+  postgres-data:
+  mongodb-data:
