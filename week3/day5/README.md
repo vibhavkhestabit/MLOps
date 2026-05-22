@@ -86,6 +86,11 @@ docker pull yourusername/node-app:1.0.0
 docker run -d -p 3000:3000 yourusername/node-app:1.0.0
 ```
 
+![ss](screenshots/ex1-1.png)
+![ss](screenshots/ex1-2.png)
+![ss](screenshots/ex1-3.png)
+![ss](screenshots/ex1-4.png)
+
 ---
 
 # 2. Private Docker Registry
@@ -163,6 +168,14 @@ Ensures registry data survives container restart.
 
 ### Garbage Collection
 Removes unused image layers.
+
+
+![ss](screenshots/ex2-1.png)
+![ss](screenshots/ex2-2.png)
+![ss](screenshots/ex2-3.png)
+![ss](screenshots/ex2-4.png)
+![ss](screenshots/ex2-5.png)
+![ss](screenshots/ex2-6.png)
 
 ---
 
@@ -245,6 +258,14 @@ You learned:
 - Why production differs from development
 - How compose overrides work
 - How deployments become automated
+
+
+![ss](screenshots/ex3-1.png)
+![ss](screenshots/ex3-2.png)
+![ss](screenshots/ex3-3.png)
+![ss](screenshots/ex3-4.png)
+![ss](screenshots/ex3-5.png)
+![ss](screenshots/ex3-6.png)
 
 ---
 
@@ -335,6 +356,12 @@ You experienced:
 - Health checks
 - Rollback strategy
 - Zero-downtime deployment concept
+
+![ss](screenshots/ex4-1.png)
+![ss](screenshots/ex4-2.png)
+![ss](screenshots/ex4-3.png)
+![ss](screenshots/ex4-4.png)
+![ss](screenshots/ex4-5.png)
 
 ---
 
@@ -434,6 +461,13 @@ rate(container_network_receive_bytes_total[1m])
 4. Use PromQL queries
 5. Visualize metrics
 
+![ss](screenshots/ex5-1.png)
+![ss](screenshots/ex5-2.png)
+![ss](screenshots/ex5-3.png)
+![ss](screenshots/ex5-4.png)
+![ss](screenshots/ex5-5.png)
+![ss](screenshots/ex5-6.png)
+
 ---
 
 # 6. Backup & Disaster Recovery
@@ -487,6 +521,9 @@ Ability to restore system after failure.
 ## Restore Procedure
 
 Testing restoration is as important as backups.
+
+![ss](screenshots/ex6-1.png)
+![ss](screenshots/ex6-2.png)
 
 ---
 
