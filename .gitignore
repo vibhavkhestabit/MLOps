@@ -9,6 +9,13 @@ npm-debug.log
 .env.local
 .env.*
 
+backups/
+*.sql
+*.bson
+
+grafana-data/
+prometheus-data/
+
 # Logs
 *.log
 **/logs/
