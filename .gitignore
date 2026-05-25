@@ -41,3 +41,15 @@ build/
 
 # OS generated files
 .DS_Store
+
+# Backup artifacts
+week3/final-project/backups/
+
+# Trivy reports
+week3/final-project/security/scan-reports/*.json
+week3/final-project/security/scan-reports/*.txt
+
+# Docker generated data
+*.tar
+*.gz
+*.zip
