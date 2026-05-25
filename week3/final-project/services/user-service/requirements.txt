@@ -3,3 +3,6 @@ uvicorn
 psycopg2-binary
 redis
 pika
+sqlalchemy
+asyncpg
+prometheus-fastapi-instrumentator
