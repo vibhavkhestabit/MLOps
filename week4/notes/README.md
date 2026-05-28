@@ -398,6 +398,21 @@ Purpose:
 
 ---
 
+## Output
+
+![ss](../day1/screenshots/ss1.png)
+![ss](../day1/screenshots/ss2.png)
+![ss](../day1/screenshots/ss3.png)
+![ss](../day1/screenshots/ss4.png)
+![ss](../day1/screenshots/ss5.png)
+![ss](../day1/screenshots/ss6.png)
+![ss](../day1/screenshots/ss7.png)
+![ss](../day1/screenshots/ss8.png)
+![ss](../day1/screenshots/ss9.png)
+![ss](../day1/screenshots/ss10.png)
+![ss](../day1/screenshots/ss11.png)
+![ss](../day1/screenshots/ss12.png)
+
 # Key Learnings From Day 1
 
 By the end of Day 1, the following concepts were clearly understood:
