@@ -400,18 +400,18 @@ Purpose:
 
 ## Output
 
-![ss](../day1/screenshots/ss1.png)
-![ss](../day1/screenshots/ss2.png)
-![ss](../day1/screenshots/ss3.png)
-![ss](../day1/screenshots/ss4.png)
-![ss](../day1/screenshots/ss5.png)
-![ss](../day1/screenshots/ss6.png)
-![ss](../day1/screenshots/ss7.png)
-![ss](../day1/screenshots/ss8.png)
-![ss](../day1/screenshots/ss9.png)
-![ss](../day1/screenshots/ss10.png)
-![ss](../day1/screenshots/ss11.png)
-![ss](../day1/screenshots/ss12.png)
+![ss](../screenshots/ss1.png)
+![ss](../screenshots/ss2.png)
+![ss](../screenshots/ss3.png)
+![ss](../screenshots/ss4.png)
+![ss](../screenshots/ss5.png)
+![ss](../screenshots/ss6.png)
+![ss](../screenshots/ss7.png)
+![ss](../screenshots/ss8.png)
+![ss](../screenshots/ss9.png)
+![ss](../screenshots/ss10.png)
+![ss](../screenshots/ss11.png)
+![ss](../screenshots/ss12.png)
 
 # Key Learnings From Day 1
 
