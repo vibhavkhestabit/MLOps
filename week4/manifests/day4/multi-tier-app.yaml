@@ -1,0 +1,148 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: demo
+    tier: backend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: demo
+      tier: backend
+
+  template:
+    metadata:
+      labels:
+        app: demo
+        tier: backend
+
+    spec:
+      containers:
+      - name: backend
+        image: nginx:1.25-alpine
+
+        ports:
+        - containerPort: 80
+
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+
+      initContainers:
+      - name: create-response
+        image: busybox:1.36
+
+        command:
+        - sh
+        - -c
+        - |
+          echo "Backend Response from $(hostname)" > /html/index.html
+
+        volumeMounts:
+        - name: html
+          mountPath: /html
+
+      volumes:
+      - name: html
+        emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+
+spec:
+  type: ClusterIP
+
+  selector:
+    app: demo
+    tier: backend
+
+  ports:
+  - port: 80
+    targetPort: 80
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+
+  labels:
+    app: demo
+    tier: frontend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: demo
+      tier: frontend
+
+  template:
+    metadata:
+      labels:
+        app: demo
+        tier: frontend
+
+    spec:
+      containers:
+      - name: frontend
+        image: nginx:1.25-alpine
+
+        ports:
+        - containerPort: 80
+
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+
+      initContainers:
+      - name: create-page
+        image: busybox:1.36
+
+        command:
+        - sh
+        - -c
+        - |
+          cat > /html/index.html << EOF
+          <html>
+          <body>
+          <h1>Frontend Pod</h1>
+          <p>I talk to backend-service internally!</p>
+          </body>
+          </html>
+          EOF
+
+        volumeMounts:
+        - name: html
+          mountPath: /html
+
+      volumes:
+      - name: html
+        emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+
+spec:
+  type: NodePort
+
+  selector:
+    app: demo
+    tier: frontend
+
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30081
