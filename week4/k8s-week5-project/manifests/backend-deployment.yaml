@@ -1,0 +1,89 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: backend
+  labels:
+    app: backend
+    tier: backend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: backend
+
+  template:
+    metadata:
+      labels:
+        app: backend
+        tier: backend
+
+    spec:
+
+      initContainers:
+      - name: create-api-response
+        image: busybox:1.36
+
+        command:
+        - sh
+        - -c
+
+        args:
+        - |
+          mkdir -p /html
+
+          cat > /html/index.html <<EOF
+          {
+            "service":"backend-api",
+            "pod":"$(hostname)",
+            "status":"healthy",
+            "version":"v1"
+          }
+          EOF
+
+        volumeMounts:
+        - name: api-content
+          mountPath: /html
+
+      containers:
+      - name: backend
+
+        image: nginx:1.25-alpine
+
+        ports:
+        - containerPort: 80
+
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "64Mi"
+
+          limits:
+            cpu: "200m"
+            memory: "128Mi"
+
+        volumeMounts:
+        - name: api-content
+          mountPath: /usr/share/nginx/html
+
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+
+          initialDelaySeconds: 10
+          periodSeconds: 10
+
+      volumes:
+      - name: api-content
+        emptyDir: {}

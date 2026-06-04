@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+    tier: frontend
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: frontend
+
+  template:
+    metadata:
+      labels:
+        app: frontend
+        tier: frontend
+
+    spec:
+
+      initContainers:
+      - name: create-html
+        image: busybox:1.36
+
+        command:
+        - sh
+        - -c
+
+        args:
+        - |
+          cat > /html/index.html <<EOF
+          <!DOCTYPE html>
+          <html>
+          <head>
+            <title>Kubernetes Final Project</title>
+          </head>
+          <body style="font-family: Arial; text-align:center; padding:50px;">
+            <h1>🚀 Kubernetes Final Project</h1>
+            <h2>Frontend Service</h2>
+            <p>Pod Name: $(hostname)</p>
+            <p>Replicas: 2</p>
+            <p>Accessed through Ingress</p>
+          </body>
+          </html>
+          EOF
+
+        volumeMounts:
+        - name: html
+          mountPath: /html
+
+      containers:
+      - name: frontend
+
+        image: nginx:1.25-alpine
+
+        ports:
+        - containerPort: 80
+
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "64Mi"
+
+          limits:
+            cpu: "200m"
+            memory: "128Mi"
+
+        volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+
+          initialDelaySeconds: 10
+          periodSeconds: 10
+
+      volumes:
+      - name: html
+        emptyDir: {}

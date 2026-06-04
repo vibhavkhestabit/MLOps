@@ -1,0 +1,92 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: assets
+  labels:
+    app: assets
+    tier: assets
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: assets
+
+  template:
+    metadata:
+      labels:
+        app: assets
+        tier: assets
+
+    spec:
+
+      initContainers:
+      - name: create-static-content
+        image: busybox:1.36
+
+        command:
+        - sh
+        - -c
+
+        args:
+        - |
+          mkdir -p /assets
+
+          cat > /assets/index.html <<EOF
+          <!DOCTYPE html>
+          <html>
+          <head>
+              <title>Static Assets Service</title>
+          </head>
+          <body style="font-family: Arial; text-align:center; padding:50px;">
+              <h1>📁 Static Assets Service</h1>
+              <p>Served by Assets Deployment</p>
+              <p>Pod: $(hostname)</p>
+          </body>
+          </html>
+          EOF
+
+        volumeMounts:
+        - name: assets-content
+          mountPath: /assets
+
+      containers:
+      - name: assets
+
+        image: nginx:1.25-alpine
+
+        ports:
+        - containerPort: 80
+
+        resources:
+          requests:
+            cpu: "50m"
+            memory: "32Mi"
+
+          limits:
+            cpu: "100m"
+            memory: "64Mi"
+
+        volumeMounts:
+        - name: assets-content
+          mountPath: /usr/share/nginx/html
+
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+
+      volumes:
+      - name: assets-content
+        emptyDir: {}
