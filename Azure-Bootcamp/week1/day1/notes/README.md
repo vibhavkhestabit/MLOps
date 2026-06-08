@@ -156,6 +156,15 @@ Purpose:
 
 ---
 
+## Screenshots
+
+![ss](../screenshots/ss1.png)
+![ss](../screenshots/ss2.png)
+![ss](../screenshots/ss3.png)
+![ss](../screenshots/ss4.png)
+
+---
+
 ## Day 1 Summary
 
 Day 1 introduced the Azure ecosystem and foundational concepts required for cloud administration. I learned how Azure organizes resources using tenants, subscriptions, and resource groups, explored global Azure regions, and used Azure CLI to create and manage cloud resources. These concepts form the foundation for upcoming exercises involving virtual machines, networking, storage, containers, Kubernetes, and AI services.
