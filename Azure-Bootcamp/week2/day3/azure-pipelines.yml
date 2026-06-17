@@ -5,5 +5,18 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo "Hello Azure DevOps!"
-  displayName: "Hello World"
+
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.11'
+  displayName: 'Use Python 3.11'
+
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r Azure-Bootcamp/week2/day3/app/requirements.txt
+  displayName: 'Install Dependencies'
+
+- script: |
+    cd Azure-Bootcamp/week2/day3/app
+    pytest -v
+  displayName: 'Run Unit Tests'
