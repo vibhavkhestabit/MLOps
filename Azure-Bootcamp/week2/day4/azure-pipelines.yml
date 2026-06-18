@@ -7,6 +7,7 @@ pool:
 variables:
   imageRepository: flask-app
   containerRegistry: acr-connection
+  kubernetesServiceConnection: aks-connection
 
 steps:
 
@@ -21,3 +22,19 @@ steps:
     tags: |
       $(Build.BuildId)
       latest
+
+- task: Kubernetes@1
+  displayName: Deploy to AKS
+  inputs:
+    connectionType: Kubernetes Service Connection
+    kubernetesServiceEndpoint: $(kubernetesServiceConnection)
+    command: set
+    arguments: image deployment/flask-app flask-app=vibhavacrday4.azurecr.io/flask-app:$(Build.BuildId)
+
+- task: Kubernetes@1
+  displayName: Verify Rollout
+  inputs:
+    connectionType: Kubernetes Service Connection
+    kubernetesServiceEndpoint: $(kubernetesServiceConnection)
+    command: rollout
+    arguments: status deployment/flask-app
