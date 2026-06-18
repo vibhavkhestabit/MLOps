@@ -1,3 +1,14 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  imageRepository: flask-app
+  containerRegistry: acr-connection
+  kubernetesServiceConnection: aks-connection
+
 steps:
 
 - script: |
