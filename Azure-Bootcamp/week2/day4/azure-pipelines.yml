@@ -1,15 +1,8 @@
-trigger:
-- main
-
-pool:
-  vmImage: ubuntu-latest
-
-variables:
-  imageRepository: flask-app
-  containerRegistry: acr-connection
-  kubernetesServiceConnection: aks-connection
-
 steps:
+
+- script: |
+    docker run --privileged --rm tonistiigi/binfmt --install all
+  displayName: Set up QEMU for multi-arch builds
 
 - task: Docker@2
   displayName: Build and Push Image
@@ -19,6 +12,7 @@ steps:
     containerRegistry: $(containerRegistry)
     Dockerfile: Azure-Bootcamp/week2/day4/Dockerfile
     buildContext: Azure-Bootcamp/week2/day4
+    arguments: --platform linux/amd64,linux/arm64
     tags: |
       $(Build.BuildId)
       latest
