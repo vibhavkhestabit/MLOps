@@ -4,13 +4,19 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  imageRepository: flask-app
+  containerRegistry: acr-connection
+
 steps:
 
 - task: Docker@2
-  displayName: Build Docker Image
+  displayName: Build and Push Image
   inputs:
-    command: build
+    command: buildAndPush
+    repository: $(imageRepository)
+    containerRegistry: $(containerRegistry)
     Dockerfile: Dockerfile
-    repository: flask-app
     tags: |
       $(Build.BuildId)
+      latest
