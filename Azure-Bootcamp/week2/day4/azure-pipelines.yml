@@ -16,7 +16,8 @@ steps:
     command: buildAndPush
     repository: $(imageRepository)
     containerRegistry: $(containerRegistry)
-    Dockerfile: Dockerfile
+    Dockerfile: Azure-Bootcamp/week2/day4/Dockerfile
+    buildContext: Azure-Bootcamp/week2/day4
     tags: |
       $(Build.BuildId)
       latest
