@@ -10,42 +10,57 @@ variables:
   kubernetesServiceConnection: aks-connection
   acrLoginServer: vibhavacrday4.azurecr.io
 
-steps:
+stages:
+- stage: Build
+  jobs:
+  - job: BuildAndPush
+    steps:
+    - task: Docker@2
+      displayName: Login to ACR
+      inputs:
+        command: login
+        containerRegistry: $(containerRegistry)
 
-- task: Docker@2
-  displayName: Login to ACR
-  inputs:
-    command: login
-    containerRegistry: $(containerRegistry)
+    - script: |
+        docker run --privileged --rm tonistiigi/binfmt --install all
+        docker buildx create --name multiarch-builder --use
+        docker buildx inspect --bootstrap
+      displayName: Set up multi-arch builder
 
-- script: |
-    docker run --privileged --rm tonistiigi/binfmt --install all
-    docker buildx create --name multiarch-builder --use
-    docker buildx inspect --bootstrap
-  displayName: Set up multi-arch builder
+    - script: |
+        docker buildx build \
+          --platform linux/amd64,linux/arm64 \
+          -f Azure-Bootcamp/week2/day4/Dockerfile \
+          -t $(acrLoginServer)/$(imageRepository):$(Build.BuildId) \
+          -t $(acrLoginServer)/$(imageRepository):latest \
+          --push \
+          Azure-Bootcamp/week2/day4
+      displayName: Build and Push Multi-Arch Image
 
-- script: |
-    docker buildx build \
-      --platform linux/amd64,linux/arm64 \
-      -f Azure-Bootcamp/week2/day4/Dockerfile \
-      -t $(acrLoginServer)/$(imageRepository):$(Build.BuildId) \
-      -t $(acrLoginServer)/$(imageRepository):latest \
-      --push \
-      Azure-Bootcamp/week2/day4
-  displayName: Build and Push Multi-Arch Image
+- stage: DeployToProduction
+  dependsOn: Build
+  jobs:
+  - deployment: DeployAKS
+    displayName: Deploy to AKS
+    environment: production
+    pool:
+      vmImage: ubuntu-latest
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: Kubernetes@1
+            displayName: Deploy to AKS
+            inputs:
+              connectionType: Kubernetes Service Connection
+              kubernetesServiceEndpoint: $(kubernetesServiceConnection)
+              command: set
+              arguments: image deployment/flask-app flask-app=$(acrLoginServer)/$(imageRepository):$(Build.BuildId)
 
-- task: Kubernetes@1
-  displayName: Deploy to AKS
-  inputs:
-    connectionType: Kubernetes Service Connection
-    kubernetesServiceEndpoint: $(kubernetesServiceConnection)
-    command: set
-    arguments: image deployment/flask-app flask-app=$(acrLoginServer)/$(imageRepository):$(Build.BuildId)
-
-- task: Kubernetes@1
-  displayName: Verify Rollout
-  inputs:
-    connectionType: Kubernetes Service Connection
-    kubernetesServiceEndpoint: $(kubernetesServiceConnection)
-    command: rollout
-    arguments: status deployment/flask-app
+          - task: Kubernetes@1
+            displayName: Verify Rollout
+            inputs:
+              connectionType: Kubernetes Service Connection
+              kubernetesServiceEndpoint: $(kubernetesServiceConnection)
+              command: rollout
+              arguments: status deployment/flask-app
