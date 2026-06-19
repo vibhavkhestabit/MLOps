@@ -1,0 +1,10 @@
+KubePodInventory
+| where TimeGenerated > ago(24h)
+| where ContainerRestartCount > 0
+| project TimeGenerated,
+          ClusterName,
+          Namespace,
+          Name,
+          ContainerName,
+          ContainerRestartCount
+| order by TimeGenerated desc

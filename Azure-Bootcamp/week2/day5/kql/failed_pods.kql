@@ -1,0 +1,9 @@
+KubePodInventory
+| where TimeGenerated > ago(24h)
+| where PodStatus != "Running"
+| project TimeGenerated,
+          Namespace,
+          Name,
+          PodStatus,
+          ClusterName
+| order by TimeGenerated desc

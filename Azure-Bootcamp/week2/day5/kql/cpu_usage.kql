@@ -1,0 +1,4 @@
+InsightsMetrics
+| where TimeGenerated > ago(1h)
+| where Name contains "cpu"
+| order by TimeGenerated desc

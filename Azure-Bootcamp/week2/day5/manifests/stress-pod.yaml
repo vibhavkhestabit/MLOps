@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: stress-pod
+spec:
+  containers:
+  - name: stress
+    image: alpine:latest
+    command:
+      - /bin/sh
+      - -c
+    args:
+      - |
+        apk add --no-cache stress-ng &&
+        stress-ng --cpu 2 --timeout 600s
