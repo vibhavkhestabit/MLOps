@@ -1,0 +1,12 @@
+{
+  "kind": "SentimentAnalysis",
+  "analysisInput": {
+    "documents": [
+      {
+        "id": "1",
+        "language": "en",
+        "text": "The deployment failed and I am extremely frustrated."
+      }
+    ]
+  }
+}

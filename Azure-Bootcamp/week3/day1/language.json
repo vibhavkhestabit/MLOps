@@ -1,0 +1,11 @@
+{
+  "kind": "LanguageDetection",
+  "analysisInput": {
+    "documents": [
+      {
+        "id": "1",
+        "text": "मुझे Azure बहुत पसंद है।"
+      }
+    ]
+  }
+}
