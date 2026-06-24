@@ -24,6 +24,8 @@ prometheus-data/
 # Python
 venv/
 **/venv/
+.venv/
+**/.venv/
 __pycache__/
 *.pyc
 
