@@ -1,0 +1,15 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandJob.schema.json
+
+code: .
+
+command: >-
+  python train.py
+
+environment:
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04
+  conda_file: conda.yml
+
+compute: azureml:day2practice
+
+experiment_name: iris-training
+display_name: iris-random-forest
