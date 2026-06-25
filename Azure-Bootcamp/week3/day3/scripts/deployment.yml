@@ -1,0 +1,9 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
+
+name: blue
+endpoint_name: vibhav-iris-endpoint-01
+
+model: azureml:iris-knn-model:1
+
+instance_type: Standard_DS1_v2
+instance_count: 1

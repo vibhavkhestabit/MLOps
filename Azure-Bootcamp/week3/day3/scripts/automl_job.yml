@@ -1,0 +1,23 @@
+$schema: https://azuremlschemas.azureedge.net/latest/autoMLJob.schema.json
+
+type: automl
+
+experiment_name: iris-automl-experiment-v3
+display_name: iris-automl-v3
+
+task: classification
+primary_metric: accuracy
+
+compute: azureml:cpu-cluster
+
+training_data:
+  type: mltable
+  path: azureml:iris-mltable:2
+
+target_column_name: species
+
+limits:
+  timeout_minutes: 20
+  trial_timeout_minutes: 5
+  max_trials: 5
+  max_concurrent_trials: 2
