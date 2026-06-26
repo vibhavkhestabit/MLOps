@@ -55,3 +55,5 @@ week3/final-project/security/scan-reports/*.txt
 *.tar
 *.gz
 *.zip
+
+Azure-Bootcamp/week3/day4/scripts/set_env.sh
