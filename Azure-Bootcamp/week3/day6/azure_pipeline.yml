@@ -49,12 +49,18 @@ stages:
       runOnce:
         deploy:
           steps:
+          # Deployment jobs (unlike regular jobs) do NOT automatically
+          # check out the repo on their agent. Without this, every path
+          # below (manifests/, etc.) would not exist on this fresh agent
+          # — this is what caused "the path ... does not exist" earlier.
+          - checkout: self
+
           # First-ever deploy to a fresh AKS cluster has no Deployment
           # object yet, so `kubectl set image` alone would fail with
           # "not found". `apply -f` is idempotent: creates it the first
           # time, harmlessly re-applies the same spec on every run after.
           - task: Kubernetes@1
-            displayName: Apply Manifests (Deployment, Service, Ingress)
+            displayName: Apply Manifests (Deployment, Service)
             inputs:
               connectionType: Kubernetes Service Connection
               kubernetesServiceEndpoint: $(kubernetesServiceConnection)
