@@ -1,0 +1,78 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  imageRepository: ai-log-analyser
+  containerRegistry: acr-connection-week3
+  kubernetesServiceConnection: aks-connection-week3
+  acrLoginServer: acrbootcampweek3.azurecr.io
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildAndPush
+    steps:
+    - task: Docker@2
+      displayName: Login to ACR
+      inputs:
+        command: login
+        containerRegistry: $(containerRegistry)
+
+    - script: |
+        docker run --privileged --rm tonistiigi/binfmt --install all
+        docker buildx create --name multiarch-builder --use
+        docker buildx inspect --bootstrap
+      displayName: Set up multi-arch builder
+
+    - script: |
+        docker buildx build \
+          --platform linux/amd64,linux/arm64 \
+          -f Azure-Bootcamp/week3/day6/Dockerfile \
+          -t $(acrLoginServer)/$(imageRepository):$(Build.BuildId) \
+          -t $(acrLoginServer)/$(imageRepository):latest \
+          --push \
+          Azure-Bootcamp/week3/day6
+      displayName: Build and Push Multi-Arch Image
+
+- stage: DeployToProduction
+  dependsOn: Build
+  jobs:
+  - deployment: DeployAKS
+    displayName: Deploy to AKS
+    environment: production
+    pool:
+      vmImage: ubuntu-latest
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          # First-ever deploy to a fresh AKS cluster has no Deployment
+          # object yet, so `kubectl set image` alone would fail with
+          # "not found". `apply -f` is idempotent: creates it the first
+          # time, harmlessly re-applies the same spec on every run after.
+          - task: Kubernetes@1
+            displayName: Apply Manifests (Deployment, Service, Ingress)
+            inputs:
+              connectionType: Kubernetes Service Connection
+              kubernetesServiceEndpoint: $(kubernetesServiceConnection)
+              command: apply
+              arguments: -f Azure-Bootcamp/week3/day6/manifests/
+
+          - task: Kubernetes@1
+            displayName: Set New Image
+            inputs:
+              connectionType: Kubernetes Service Connection
+              kubernetesServiceEndpoint: $(kubernetesServiceConnection)
+              command: set
+              arguments: image deployment/ai-log-analyser ai-log-analyser=$(acrLoginServer)/$(imageRepository):$(Build.BuildId)
+
+          - task: Kubernetes@1
+            displayName: Verify Rollout
+            inputs:
+              connectionType: Kubernetes Service Connection
+              kubernetesServiceEndpoint: $(kubernetesServiceConnection)
+              command: rollout
+              arguments: status deployment/ai-log-analyser

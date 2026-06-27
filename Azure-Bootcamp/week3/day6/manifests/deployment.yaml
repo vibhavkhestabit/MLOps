@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-log-analyser
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: ai-log-analyser
+  template:
+    metadata:
+      labels:
+        app: ai-log-analyser
+    spec:
+      containers:
+        - name: ai-log-analyser
+          image: acrbootcampweek3.azurecr.io/ai-log-analyser:latest
+          ports:
+            - containerPort: 8000
+          # NOTE: both probes point at /healthz for now, not /readyz.
+          # /readyz currently returns 503 until AZURE_OPENAI_* env vars
+          # are set (Key Vault wiring is a later step in Day 6) — using
+          # it here today would mark the pod permanently NotReady and
+          # the Service would never route traffic to it. Revisit once
+          # Key Vault secrets are wired in: readinessProbe should move
+          # to /readyz so traffic only routes once OpenAI config is
+          # actually present.
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 3
+            periodSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
