@@ -10,11 +10,16 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-COPY app/requirements.txt .
+# NOTE: source files (main.py, analyser.py, requirements.txt) sit
+# FLAT in this same day6/ folder as the Dockerfile — there is no
+# app/ subfolder. COPY paths below are relative to the build
+# context root, not to an app/ subdirectory.
+COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY app/ .
+COPY main.py .
+COPY analyser.py .
 
 EXPOSE 8000
 
