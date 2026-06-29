@@ -22,17 +22,43 @@ spec:
           image: acrbootcampweek3.azurecr.io/ai-log-analyser:latest
           ports:
             - containerPort: 8000
-          # NOTE: both probes point at /healthz for now, not /readyz.
-          # /readyz currently returns 503 until AZURE_OPENAI_* env vars
-          # are set (Key Vault wiring is a later step in Day 6) — using
-          # it here today would mark the pod permanently NotReady and
-          # the Service would never route traffic to it. Revisit once
-          # Key Vault secrets are wired in: readinessProbe should move
-          # to /readyz so traffic only routes once OpenAI config is
-          # actually present.
+          # These come from the Kubernetes Secret "azure-openai-secrets",
+          # which the Secrets Store CSI driver creates automatically as a
+          # side effect of mounting the volume below (see secretObjects
+          # in secret-provider-class.yaml). The app reads these via plain
+          # os.getenv() — it has no idea they originated in Key Vault.
+          env:
+            - name: AZURE_OPENAI_ENDPOINT
+              valueFrom:
+                secretKeyRef:
+                  name: azure-openai-secrets
+                  key: AZURE_OPENAI_ENDPOINT
+            - name: AZURE_OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: azure-openai-secrets
+                  key: AZURE_OPENAI_API_KEY
+            - name: AZURE_OPENAI_DEPLOYMENT
+              valueFrom:
+                secretKeyRef:
+                  name: azure-openai-secrets
+                  key: AZURE_OPENAI_DEPLOYMENT
+          # Mounting this volume is what triggers the CSI driver to
+          # actually fetch from Key Vault and sync the K8s Secret above.
+          # Without this volumeMount, azure-openai-secrets is never
+          # created, and the env vars above would fail to resolve.
+          volumeMounts:
+            - name: openai-secrets-store
+              mountPath: "/mnt/secrets-store"
+              readOnly: true
+          # Now that real Key Vault-backed config exists, readiness can
+          # correctly check /readyz instead of /healthz. This means the
+          # Service will only route traffic to a pod once it has
+          # confirmed AZURE_OPENAI_* are actually present — not just
+          # that the process is alive.
           readinessProbe:
             httpGet:
-              path: /healthz
+              path: /readyz
               port: 8000
             initialDelaySeconds: 3
             periodSeconds: 5
@@ -43,3 +69,10 @@ spec:
               port: 8000
             initialDelaySeconds: 10
             periodSeconds: 10
+      volumes:
+        - name: openai-secrets-store
+          csi:
+            driver: secrets-store.csi.k8s.io
+            readOnly: true
+            volumeAttributes:
+              secretProviderClass: azure-kvname-week3
