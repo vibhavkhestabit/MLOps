@@ -1,0 +1,6 @@
+openai
+azure-identity
+azure-search-documents
+numpy
+python-dotenv
+tiktoken
