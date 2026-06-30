@@ -181,6 +181,23 @@ silently breaks again if the underlying cause is forgotten.
   Vault is temporarily unreachable." Only the readiness probe moved to
   `/readyz`, so a config/secrets problem holds traffic back without
   triggering pointless restarts.
+  
+
+# Screenshots
+
+![ss](../screenshots/ss1.png)
+![ss](../screenshots/ss2.png)
+![ss](../screenshots/ss3.png)
+![ss](../screenshots/ss4.png)
+![ss](../screenshots/ss5.png)
+![ss](../screenshots/ss6.png)
+![ss](../screenshots/ss7.png)
+![ss](../screenshots/ss8.png)
+![ss](../screenshots/ss9.png)
+![ss](../screenshots/ss10.png)
+![ss](../screenshots/ss11.png)
+![ss](../screenshots/ss12.png)
+![ss](../screenshots/ss13.png)
 
 ## Cost notes
 
